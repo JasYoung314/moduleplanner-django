@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+#TEST_RUNNER = 'module_planner.testrunner.NoDbTestRunner'
 
 
 # Quick-start development settings - unsuitable for production
@@ -72,16 +73,7 @@ TEMPLATE_URL = '/templates/'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-
-AUTHENTICATION_BACKENDS = (
-        'mongoengine.django.auth.MongoEngineBackend',
-)
-
-SESSION_ENGINE = 'mongoengine.django.sessions'
-MONGO_DATABASE_NAME = 'plannerDB'
-
-from mongoengine import connect
-connect(MONGO_DATABASE_NAME)
+DATABASE = {}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
